@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Install Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-lg text-center">
+        <h1 class="text-3xl font-bold mb-4">Epic Adventure Game</h1>
+        <p class="text-gray-300 mb-6">Embark on an epic journey filled with mystery, action, and adventure. Download now and start playing!</p>
+        
+        <button id="download-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition">Download Now</button>
+        
+        <div id="confirmation" class="hidden mt-4 text-green-400">Downloading...</div>
+        
+        <h2 class="text-xl font-semibold mt-6">System Requirements</h2>
+        <ul class="text-gray-400 text-left mt-2">
+            <li>• OS: Windows 10 / macOS</li>
+            <li>• Processor: Intel i5 or AMD equivalent</li>
+            <li>• Memory: 8GB RAM</li>
+            <li>• Graphics: NVIDIA GTX 1050 / AMD Radeon RX 560</li>
+            <li>• Storage: 50GB available space</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function() {
+            document.getElementById("confirmation").classList.remove("hidden");
+            setTimeout(() => {
+                window.location.href = "#"; // Replace '#' with the actual download link
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
