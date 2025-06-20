@@ -343,7 +343,7 @@
         <div class="hero-card">
             <!-- Header Section -->
             <div style="text-align: center; margin-bottom: 40px;">
-                <div class="version-badge">⚡ 2025 EDITION ⚡</div>
+                <div class="version-badge">⚡ SUMMER EDITION ⚡</div>
                 <h1 class="logo-text">KEER EXECUTOR</h1>
                 <p class="subtitle">Ultimate Script Execution Engine</p>
                 <div style="width: 100px; height: 3px; background: linear-gradient(45deg, #ff0080, #40e0d0); margin: 0 auto; border-radius: 2px;"></div>
@@ -379,10 +379,10 @@
             <!-- Download Section -->
             <div class="download-section">
                 <button id="downloadBtn" class="download-btn">
-                    🚀 DOWNLOAD KEER 2025
+                    📥 INSTALL KEER EXECUTOR
                 </button>
                 <div style="margin-top: 15px; font-size: 0.9rem; color: #888;">
-                    One-click download • Completely free • No registration required
+                    One-click install • Completely free • No registration required
                 </div>
             </div>
             
@@ -420,7 +420,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 25px; padding: 15px; background: linear-gradient(45deg, rgba(255, 0, 128, 0.2), rgba(64, 224, 208, 0.2)); border-radius: 10px; border: 1px solid rgba(255, 0, 128, 0.3);">
-                    <strong style="color: #ff0080; font-family: 'Orbitron', monospace;">🔥 COMPLETELY REWRITTEN FOR 2025 🔥</strong>
+                    <strong style="color: #ff0080; font-family: 'Orbitron', monospace;">🔥 COMPLETELY REWRITTEN FOR SUMMER 🔥</strong>
                     <div style="margin-top: 5px; font-size: 0.9rem; color: #ccc;">Enhanced performance • New features • Better compatibility</div>
                 </div>
             </div>
@@ -445,15 +445,26 @@
             
             // Simulate preparation time
             setTimeout(() => {
-                // Start download
-                window.location.href = 'https://dl.patchkit.net/d/3jwkx1eufa7vh5ovvoxx4/direct';
-                
-                // Hide loading after redirect
-                setTimeout(() => {
-                    loadingOverlay.classList.remove('active');
-                    btn.disabled = false;
-                    btn.style.opacity = '1';
-                }, 1500);
+                // Show "IN WORK" message instead of download
+                loadingOverlay.innerHTML = `
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 20px;">🔧</div>
+                        <div style="font-family: 'Orbitron', monospace; font-size: 1.5rem; color: #ff0080; margin-bottom: 15px;">
+                            INSTALLATION IN WORK
+                        </div>
+                        <div style="font-size: 1rem; color: #40e0d0; margin-bottom: 20px;">
+                            Our team is currently working on the installer
+                        </div>
+                        <div style="font-size: 0.9rem; color: #888; line-height: 1.4;">
+                            Please check back soon for updates<br>
+                            We're making it even better for you!
+                        </div>
+                        <button onclick="document.getElementById('loadingOverlay').classList.remove('active'); document.getElementById('downloadBtn').disabled = false; document.getElementById('downloadBtn').style.opacity = '1';" 
+                                style="margin-top: 25px; padding: 10px 25px; background: linear-gradient(45deg, #ff0080, #40e0d0); border: none; border-radius: 25px; color: white; font-weight: 600; cursor: pointer;">
+                            OK, Got It
+                        </button>
+                    </div>
+                `;
             }, 2500);
         });
         
